@@ -1,0 +1,25 @@
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: #fbc02d; /* Yellow from logo */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #f9a825;
+}
