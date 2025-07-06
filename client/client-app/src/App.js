@@ -3,9 +3,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Landing from './pages/Landing';
-import AdminLogin from './pages/Auth/AdminLogin';
+import AdminLogin from './pages/Auth/Login';
 import EducatorLogin from './pages/Auth/Educator';
-import StudentLogin from './pages/Auth/StudentLogin';
+import StudentLogin from './pages/Auth/Register';
 
 import AdminDashboard from './pages/Admin/Dashboard';
 import ManageCourses from './pages/Admin/ManageCourses';

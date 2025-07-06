@@ -1,25 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Header from '../../layouts/Header';
+import Footer from '../../layouts/Footer';
 
-const EducatorLogin = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    // TODO: Call Educator Login API
-    alert('Educator login attempted');
-  };
-
+const Educator = () => {
   return (
-    <div className="auth-container">
-      <h2>Educator Login</h2>
-      <form onSubmit={handleLogin}>
-        <input type="email" placeholder="Educator Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        <button type="submit">Login</button>
-      </form>
-    </div>
+    <>
+      <Header />
+      <main className="p-6 bg-background min-h-screen text-white">
+        <h1 className="text-3xl font-bold text-accent mb-4">Educator Portal</h1>
+        <p className="text-secondary">Access your dashboard, upload new courses, and monitor engagement.</p>
+      </main>
+      <Footer />
+    </>
   );
 };
 
-export default EducatorLogin;
+export default Educator;
