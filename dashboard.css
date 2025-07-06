@@ -1,0 +1,240 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Layout */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 340px;
+    background-color: #1e293b;
+    color: #fff;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.sidebar h2 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #f97316; /* Gold */
+    margin-bottom: 40px;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    margin-bottom: 20px;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 18px;
+    transition: all 0.2s ease;
+    padding: 12px;
+    display: block;
+    border-radius: 8px;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background-color: #f97316; /* Orange */
+    color: white;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 50px 60px;
+    background-color: #e7e3e3;
+}
+
+.main-content h1 {
+    font-size: 36px;
+    color: #0284c7; /* Sky Blue */
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Course Section */
+.course-section h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #53aedb;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.course-card {
+    background-color: #ffffff;
+    border-radius: 14px;
+    border-left: 6px solid #0284c7; /* Sky Blue */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    width: 310px;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #f97316; /* Orange */
+    font-family: 'Segoe UI Semibold', sans-serif;
+}
+
+.course-card p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #475569; /* Dark grey */
+}
+
+.join-btn {
+    padding: 10px 20px;
+    background-color: #22c55e; /* Green */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+    background-color: #15803d;
+}
+
+.course-image {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Video Carousel */
+.video-carousel {
+    margin-top: 50px;
+}
+
+.video-carousel h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #53aedb;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 24px;
+}
+
+.carousel-track iframe {
+    width: 400px;
+    height: 300px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+/* Profile Section */
+.profile-section {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #334155; /* Grey-blue */
+    padding: 12px 14px;
+    border-radius: 12px;
+    width: 290px;
+    height: 120px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #0284c7; /* Sky Blue */
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-info .name {
+    color: #facc15; /* Gold */
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.complete-profile {
+    color: #f97316; /* Orange */
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.complete-profile:hover {
+    text-decoration: underline;
+}
+

@@ -1,0 +1,299 @@
+/*Profile section*/
+/* === Global Reset & Body Layout === */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  background: #f5f7fa; /* Light grey-blue background */
+}
+
+/* === Sidebar Styling === */
+.sidebar {
+  width: 250px;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.05); /* Subtle shadow on right */
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* === Sidebar Main Heading Styling === */
+.sidebar h1 {
+  background-color: white;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 15px;
+  border: 3px solid orange;
+  color: #1e293b;
+  transition: all 0.5s ease; /* Smooth transition on hover */
+  font-size: 22px;
+}
+
+/* === Active State for Sidebar h1 === */
+.sidebar h1:hover,
+.sidebar h1.active {
+  background-color: orange;
+  border-color: orange;
+}
+
+/* === Anchor Tag inside Sidebar h1 === */
+.sidebar h1 a {
+  color: black;
+  background-color: transparent !important;
+  outline: none;
+  font-weight: bold;
+  box-shadow: none;
+}
+
+/* === Sidebar h2 Styling === */
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* === Main Container Styling === */
+.container {
+  margin-left: 270px; /* Push right of fixed sidebar */
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* === General Headings === */
+h2 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* === Form Section Box === */
+.form-section {
+  margin-bottom: 40px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* === Form Headings === */
+.form-section h3 {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.form-section h4 {
+  margin-top: 20px;
+  color: #555;
+}
+
+/* === Form Layout Row === */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.row div {
+  flex: 1 1 45%;
+}
+
+/* === Input Label Styling === */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+/* === Inputs and Selects === */
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+/* === Primary Button Styling === */
+button {
+  padding: 12px 25px;
+  background-color: #007bff; /* Bootstrap blue */
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* === Dashboard Layout Wrapper === */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* === Sidebar (Repeated for Specific Layout) === */
+.sidebar {
+  width: 250px;
+  background-color: #f0f4f8;
+  padding: 1.5rem 1rem;
+  border-right: 1px solid #d0d7de;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* === Sidebar Section Headers === */
+.sidebar h2 {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem;
+  color: #444;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* === Sidebar Links === */
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: #007bff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+}
+
+/* === Hover Style for Sidebar Links === */
+.sidebar a:hover {
+  background-color: #e0ecff;
+  color: #0056b3;
+}
+
+/* === Active Sidebar Link === */
+.sidebar a.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* === Collapsible Sublist === */
+.step-sublist {
+  list-style: none;
+  padding-left: 1rem;
+  display: none;
+  margin: 0;
+}
+
+/* === Expanded Sublist === */
+.step-sublist.open {
+  display: block;
+}
+
+.step-sublist li {
+  margin: 0.3rem 0;
+}
+
+/* === Links in Sublist === */
+.step-sublist a {
+  text-decoration: none;
+  color: #007bff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.step-sublist a:hover {
+  background-color: #e6f0ff;
+}
+
+.step-sublist a.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* === Content Section (Right of Sidebar) === */
+.content {
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+/* === Grid Layout for Forms === */
+form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+/* === Label Styling (Again) === */
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+/* === Input & Textarea Styling === */
+input[type="text"],
+input[type="url"],
+input[type="date"],
+input[type="file"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* === Submit Button Styling === */
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  height: 40px;
+  width: 120px;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 100px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* === Display Box for JSON or Data === */
+#displayData {
+  margin-top: 2rem;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* === Code or Preformatted Text Styling === */
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

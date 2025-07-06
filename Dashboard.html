@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Student Dashboard - Britz Minds</title>
+    <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h2>Student Dashboard</h2>
+            <ul class="sidebar-menu">
+                <li><a href="Dashboard.html" class="active">Overview</a></li>
+                <li><a href="#">My Courses</a></li>
+                <li><a href="#">Quiz Area</a></li>
+                <li><a href="#">Progress</a></li>
+                <li><a href="#">Logout</a></li>
+                <div class="profile-section">
+                    <img src="https://i.ibb.co/KRKdG01/image.png" alt="Profile Avatar" class="avatar">
+                    <div class="profile-info">
+                        <p class="name">Praveen Kumar</p>
+                        <a href="#" class="complete-profile">Profile</a>
+                    </div>
+                </div>
+
+
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>Welcome, Student!</h1>
+
+    <div class="video-carousel">
+        <h2>Course Previews</h2>
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <div class="carousel-track" id="carouselTrack">
+                <iframe src="https://www.youtube.com/embed/3JluqTojuME" title="HTML Basics" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/kUMe1FH4CHE" title="CSS Crash Course" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/Z0gguhEmWiY" title="JavaScript Intro" allowfullscreen></iframe>
+            </div>
+            <button class="carousel-btn next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+    </div>
+    
+
+            <div class="course-section">
+                <h2>Available Courses</h2>
+                <div class="course-cards">
+                    
+                    <div class="course-card">
+                        <img src="https://i.ibb.co/fwdKyLj/programming-background-collage-23-2149901777.webp" alt="Web Dev" class="course-image">
+                        <h3>Web Development Fundamentals</h3>
+                        <p>Learn HTML, CSS, JavaScript from scratch.</p>
+                        <button class="join-btn">Join Course</button>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="https://i.ibb.co/G43M1QHr/python-program-language-code-developer-computer-concept-datum-cyberspace-software-symbol-web-app-app.webp" alt="Python" class="course-image">
+                        <h3>Python for Beginners</h3>
+                        <p>Introduction to Python programming and logic building.</p>
+                        <button class="join-btn">Join Course</button>
+                    </div>
+
+                    <div class="course-card">
+                        <img src="https://i.ibb.co/WNx6QC6C/data-science-xe1pmo7wm4jcokpd.webp" alt="Data Science" class="course-image">
+                        <h3>Data Science Basics</h3>
+                        <p>Get started with data analysis, Pandas and visualization.</p>
+                        <button class="join-btn">Join Course</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+    let scrollIndex = 0;
+    const track = document.getElementById("carouselTrack");
+    const cardWidth = 370; // iframe width + gap
+
+    function moveCarousel(direction) {
+        scrollIndex += direction;
+        const maxIndex = track.children.length - 1;
+        if (scrollIndex < 0) scrollIndex = 0;
+        if (scrollIndex > maxIndex) scrollIndex = maxIndex;
+        track.style.transform = `translateX(-${scrollIndex * cardWidth}px)`;
+    }
+</script>
+
+</body>
+</html>
